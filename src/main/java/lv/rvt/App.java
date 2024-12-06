@@ -1,36 +1,32 @@
 package lv.rvt;
 
 public class App {
-    public class Main {
+  public static void main(String[] args) {
+    // example main program for the first section of the exercise
 
-        public static void main(String[] args) {
+    HealthStation childrensHospital = new HealthStation();
 
-            
-           /// Person ada = new Person("Ada");
-           /// Person antti = new Person("Antti");
-           /// Person martin = new Person("Martin");
-    
-          ///  ada.printPerson();
-           /// antti.printPerson();
-           /// martin.printPerson();
+    Person ethan = new Person("Ethan", 1, 110, 7);
+    Person peter = new Person("Peter", 33, 176, 85);
 
-            ///Product banana = new Product("Banana");
-           /// banana.printProduct();
-           
-           DecreasingCounter counter = new DecreasingCounter(2);
+    System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+    System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
 
-           counter.printValue();
+    childrensHospital.feed(ethan);
+    childrensHospital.feed(ethan);
+    childrensHospital.feed(ethan);
 
-           counter.decrement();
-           counter.printValue();
-   
-           counter.decrement();
-           counter.printValue();
-   
-           counter.decrement();
-           counter.printValue();
+    System.out.println("");
 
-        }
-    }
+    System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+    System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
 
+  }
 }
+
+
+          
+
+        
+
+
