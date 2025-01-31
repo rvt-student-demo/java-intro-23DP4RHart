@@ -1,16 +1,15 @@
 package lv.rvt;
 
 public class Person {
-    private String name;
+    public String name;
     private int age;
     private int height;
     private int weight;
+    public String address;
 
-    public Person(String name, int age, int height, int weight){
+    public Person(String name, String address){
         this.name = name;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
+        this.address = address;
     }
 
     public String getName(){
@@ -30,6 +29,10 @@ public class Person {
     }
     public int getAge(){
         return age;
+    }
+    @Override
+    public String toString(){
+        return name + address;
     }
     
 

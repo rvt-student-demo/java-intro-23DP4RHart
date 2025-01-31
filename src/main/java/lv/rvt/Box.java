@@ -1,9 +1,12 @@
 package lv.rvt;
 
-class Box {
-    private double length;
-    private double width;
-    private double height;
+public class Box {
+    public double length;
+    public double width;
+    public double height;
+    public double biggerBox;
+    public double smallerBox;
+    public double outsideBox;
     private double volume;
 
 
@@ -31,9 +34,23 @@ class Box {
     }
     public double volume(){
         return length * width * height;
+    } 
+    public Box biggerBox( Box oldBox ){
+        return new Box( 1.25*oldBox.width, 1.25*oldBox.length, 1.25*oldBox.height);
+} 
+    public Box smallerBox(Box oldBox){
+        return new Box(0.75*oldBox.width, 0.75*oldBox.length, 0.75*oldBox.height);
     }
-    
+
+    public boolean nests( Box outsideBox){
+        if biggerBox.volume > smallerBox.volume{
+            return("True");
+        }
+    }
+        
 }
+
+
 
 
 
